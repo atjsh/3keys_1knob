@@ -69,9 +69,9 @@ struct key {
 // Update NeoPixels
 void NEO_update(uint8_t * neo) {
   EA = 0;                                   // disable interrupts
-  NEO_writeColor(neo[0], 0, 0);             // NeoPixel 1 lights up red
-  NEO_writeColor(0, neo[1], 0);             // NeoPixel 2 lights up green
-  NEO_writeColor(0, 0, neo[2]);             // NeoPixel 3 lights up blue
+  NEO_writeColor(neo[0], neo[0], neo[0]);             // NeoPixel 1 lights up
+  NEO_writeColor(neo[1], neo[1], neo[1]);             // NeoPixel 2 lights up
+  NEO_writeColor(neo[2], neo[2], neo[2]);             // NeoPixel 3 lights up
   EA = 1;                                   // enable interrupts
 }
 
