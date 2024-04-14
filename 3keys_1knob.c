@@ -101,7 +101,7 @@ void handle_key(uint8_t current, struct key * key, uint8_t * neo) {
       } else {
         CON_press(key->code);               // press consumer key
       }
-      if(neo) *neo = NEO_MAX;               // light up corresponding NeoPixel
+      // if(neo) *neo = NEO_MAX;               // light up corresponding NeoPixel
     }
     else {                                  // key was released?
       if(key->type == KEYBOARD) {
@@ -111,9 +111,9 @@ void handle_key(uint8_t current, struct key * key, uint8_t * neo) {
       }
     }
   }
-  else if(key->last) {                      // key still being pressed?
-    if(neo) *neo = NEO_MAX;                 // keep NeoPixel on
-  }
+  // else if(key->last) {                      // key still being pressed?
+  //   if(neo) *neo = NEO_MAX;                 // keep NeoPixel on
+  // }
 }
 
 // ===================================================================================
